@@ -1,5 +1,5 @@
 mid: MPIuse.c 
-	mpicc -o mid MPIUSE.c -lm
+	mpicc -o mid MPIuse.c -lm
 
 clean: 
 	rm *.o
