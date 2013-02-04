@@ -2,7 +2,7 @@
 #include<mpi.h>
 #include<stdlib.h>
 
-void Get_input(int myrank, int comm_sz, double* a_p, double* b_p, double* n_p);
+void Get_input(int myrank, int comm_sz, double* a_p, double* b_p, int* n_p);
 
 int main(int argc, char *argv[]) {
 	
@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
 	double a_p, b_p, n_p;	
 	
-	Get_input(myrank, nprocs, a_p, b_p, n_p);
+	Get_input(myrank, nprocs, &a_p, &b_p, &n_p);
 
 	printf("CPU: %d, a_p: %lf, b_p: %lf, n_p: %d\n", myrank, a_p, b_p, n_p);
 
