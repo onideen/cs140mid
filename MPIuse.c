@@ -11,7 +11,8 @@ int main(int argc, char *argv[]) {
 	int nprocs;
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
 	MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
-	double a_p, b_p, n_p;	
+	double a_p, b_p;
+	int n_p;	
 	
 	Get_input(myrank, nprocs, &a_p, &b_p, &n_p);
 
